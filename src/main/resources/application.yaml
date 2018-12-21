@@ -1,0 +1,7 @@
+
+spring:
+  application:
+    name: weather-service
+    
+server:
+  servlet.context-path: /${spring.application.name}
