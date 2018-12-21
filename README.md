@@ -1,2 +1,2 @@
 # weather-api
-Weather API to get weather forecast by City.
+Weather API to get weather forecast by city.
