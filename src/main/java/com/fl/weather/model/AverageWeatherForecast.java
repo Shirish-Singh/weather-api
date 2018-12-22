@@ -2,27 +2,38 @@ package com.fl.weather.model;
 
 public class AverageWeatherForecast {
 
-	private Float minTemp;
-	private Float maxTemp;
-	private Float pressure;
-	
-	public Float getMinTemp() {
-		return minTemp;
+	private double avgNightlyTemp;
+	private double avgDailyTemp;
+	private double avgPressure;
+
+	public double getAvgNightlyTemp() {
+		return avgNightlyTemp;
 	}
-	public void setMinTemp(Float minTemp) {
-		this.minTemp = minTemp;
+
+	public void setAvgNightlyTemp(double avgNightlyTemp) {
+		this.avgNightlyTemp = avgNightlyTemp;
 	}
-	public Float getMaxTemp() {
-		return maxTemp;
+
+	public double getAvgDailyTemp() {
+		return avgDailyTemp;
 	}
-	public void setMaxTemp(Float maxTemp) {
-		this.maxTemp = maxTemp;
+
+	public void setAvgDailyTemp(double avgDailyTemp) {
+		this.avgDailyTemp = avgDailyTemp;
 	}
-	public Float getPressure() {
-		return pressure;
+
+	public double getAvgPressure() {
+		return avgPressure;
 	}
-	public void setPressure(Float pressure) {
-		this.pressure = pressure;
+
+	public void setAvgPressure(double avgPressure) {
+		this.avgPressure = avgPressure;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "AverageWeatherForecast [avgNightlyTemp=" + avgNightlyTemp + ", avgDailyTemp=" + avgDailyTemp
+				+ ", avgPressure=" + avgPressure + "]";
+	}
+
 }

@@ -1,13 +1,11 @@
-package com.fl.weather;
+package com.fl.weather.services;
 
-import static org.junit.Assert.assertEquals;
-
+import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
-
 import com.fl.weather.model.AverageWeatherForecast;
 import com.fl.weather.services.WeatherForecastService;
 
@@ -19,10 +17,10 @@ public class WeatherServiceApplicationTests {
 	private WeatherForecastService weatherForecastService;
 
 	@Test
-	public void testGetDefaultAvgWeatherForecastByCity() {
-		AverageWeatherForecast averageWeatherForecast = weatherForecastService
-				.getDefaultAvgWeatherForecastByCity("pune");
-		assertEquals(new Float(12.44f), averageWeatherForecast.getMaxTemp());
+	public void testAverageWeatherForecastByCity() {
+		AverageWeatherForecast averageWeatherForecast = weatherForecastService.getAvgWeatherForecastByCity("pune");
+		assertNotNull(averageWeatherForecast.getAvgDailyTemp());
+		assertNotNull(averageWeatherForecast.getAvgNightlyTemp());
+		assertNotNull(averageWeatherForecast.getAvgPressure());
 	}
-
 }
